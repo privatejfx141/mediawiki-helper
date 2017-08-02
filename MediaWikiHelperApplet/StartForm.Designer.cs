@@ -64,6 +64,7 @@
             this.GenerateButton.TabIndex = 2;
             this.GenerateButton.Text = "&Generate Markup Code";
             this.GenerateButton.UseVisualStyleBackColor = true;
+            this.GenerateButton.Click += new System.EventHandler(this.GenerateButton_Click);
             // 
             // StartMenuStrip
             // 
@@ -118,7 +119,7 @@
             // abouitToolStripMenuItem
             // 
             this.abouitToolStripMenuItem.Name = "abouitToolStripMenuItem";
-            this.abouitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.abouitToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.abouitToolStripMenuItem.Text = "About";
             // 
             // StartForm

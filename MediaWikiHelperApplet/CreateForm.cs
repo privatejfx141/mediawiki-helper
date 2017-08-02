@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace MediaWikiHelperApplet {
     public partial class CreateForm : Form {
         /// <summary>
-        /// This method creates and initializes this form.
+        /// This method creates and initializes the template layout creation form.
         /// </summary>
         public CreateForm() {
             InitializeComponent();

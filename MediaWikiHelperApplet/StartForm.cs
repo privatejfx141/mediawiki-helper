@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MediaWikiHelperApplet {
@@ -21,7 +14,7 @@ namespace MediaWikiHelperApplet {
         /// <summary>
         /// Prompts the user to exit this application.
         /// </summary>
-        private void exitApplication() {
+        private void ExitApplication() {
             String exitMsg = "Are you sure you want to exit the application?";
             String exitTitle = "Exit Application";
             DialogResult exitResult = MessageBox.Show(exitMsg, exitTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -34,16 +27,17 @@ namespace MediaWikiHelperApplet {
         /// <summary>
         /// Opens the template layout creation form modally.
         /// </summary>
-        private void openCreateLayoutForm() {
+        private void OpenCreateLayoutForm() {
             Form frmCreate = new CreateForm();
             frmCreate.ShowDialog();
         }
 
         /// <summary>
-        /// 
+        /// Opens the template code generation form modally.
         /// </summary>
-        private void openGenerateCodeForm() {
-
+        private void OpenGenerateCodeForm() {
+            Form frmGenerate = new GenerateForm();
+            frmGenerate.ShowDialog();
         }
 
         /// <summary>
@@ -52,7 +46,7 @@ namespace MediaWikiHelperApplet {
         /// <param name="sender">The button control that calls this method.</param>
         /// <param name="e">Event arguments.</param>
         private void ExitButton_Click(object sender, EventArgs e) {
-            exitApplication();
+            ExitApplication();
         }
 
         /// <summary>
@@ -61,20 +55,23 @@ namespace MediaWikiHelperApplet {
         /// <param name="sender">The button control that calls this method.</param>
         /// <param name="e">Event arguments.</param>
         private void CreateLayoutButton_Click(object sender, EventArgs e) {
-            openCreateLayoutForm();
+            OpenCreateLayoutForm();
         }
 
         private void createLayoutToolStripMenuItem_Click(object sender, EventArgs e) {
-            openCreateLayoutForm();
+            OpenCreateLayoutForm();
         }
 
         private void generateCodeToolStripMenuItem_Click(object sender, EventArgs e) {
-
+            OpenGenerateCodeForm();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e) {
-            exitApplication();
+            ExitApplication();
         }
 
+        private void GenerateButton_Click(object sender, EventArgs e) {
+            OpenGenerateCodeForm();
+        }
     }
 }
