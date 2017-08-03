@@ -58,20 +58,24 @@ namespace MediaWikiHelperApplet {
             OpenCreateLayoutForm();
         }
 
-        private void createLayoutToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void CreateLayoutToolStripMenuItem_Click(object sender, EventArgs e) {
             OpenCreateLayoutForm();
         }
 
-        private void generateCodeToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void GenerateCodeToolStripMenuItem_Click(object sender, EventArgs e) {
             OpenGenerateCodeForm();
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e) {
             ExitApplication();
         }
 
         private void GenerateButton_Click(object sender, EventArgs e) {
             OpenGenerateCodeForm();
+        }
+
+        private void StartForm_Load(object sender, EventArgs e) {
+
         }
     }
 }

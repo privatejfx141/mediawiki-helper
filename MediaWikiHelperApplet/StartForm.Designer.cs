@@ -38,9 +38,10 @@
             // 
             // ExitButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(176, 88);
+            this.ExitButton.Location = new System.Drawing.Point(264, 135);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(160, 48);
+            this.ExitButton.Size = new System.Drawing.Size(240, 74);
             this.ExitButton.TabIndex = 0;
             this.ExitButton.Text = "E&xit Application";
             this.ExitButton.UseVisualStyleBackColor = true;
@@ -48,9 +49,10 @@
             // 
             // CreateLayoutButton
             // 
-            this.CreateLayoutButton.Location = new System.Drawing.Point(8, 32);
+            this.CreateLayoutButton.Location = new System.Drawing.Point(12, 49);
+            this.CreateLayoutButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CreateLayoutButton.Name = "CreateLayoutButton";
-            this.CreateLayoutButton.Size = new System.Drawing.Size(160, 48);
+            this.CreateLayoutButton.Size = new System.Drawing.Size(240, 74);
             this.CreateLayoutButton.TabIndex = 1;
             this.CreateLayoutButton.Text = "&Create Template Layout";
             this.CreateLayoutButton.UseVisualStyleBackColor = true;
@@ -58,9 +60,10 @@
             // 
             // GenerateButton
             // 
-            this.GenerateButton.Location = new System.Drawing.Point(176, 32);
+            this.GenerateButton.Location = new System.Drawing.Point(264, 49);
+            this.GenerateButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GenerateButton.Name = "GenerateButton";
-            this.GenerateButton.Size = new System.Drawing.Size(160, 48);
+            this.GenerateButton.Size = new System.Drawing.Size(240, 74);
             this.GenerateButton.TabIndex = 2;
             this.GenerateButton.Text = "&Generate Markup Code";
             this.GenerateButton.UseVisualStyleBackColor = true;
@@ -68,12 +71,14 @@
             // 
             // StartMenuStrip
             // 
+            this.StartMenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.StartMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.StartMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.StartMenuStrip.Name = "StartMenuStrip";
-            this.StartMenuStrip.Size = new System.Drawing.Size(345, 24);
+            this.StartMenuStrip.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
+            this.StartMenuStrip.Size = new System.Drawing.Size(518, 35);
             this.StartMenuStrip.TabIndex = 3;
             this.StartMenuStrip.Text = "menuStrip1";
             // 
@@ -84,56 +89,58 @@
             this.generateCodeToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 29);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // createLayoutToolStripMenuItem
             // 
             this.createLayoutToolStripMenuItem.Name = "createLayoutToolStripMenuItem";
-            this.createLayoutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.createLayoutToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
             this.createLayoutToolStripMenuItem.Text = "Create Layout";
-            this.createLayoutToolStripMenuItem.Click += new System.EventHandler(this.createLayoutToolStripMenuItem_Click);
+            this.createLayoutToolStripMenuItem.Click += new System.EventHandler(this.CreateLayoutToolStripMenuItem_Click);
             // 
             // generateCodeToolStripMenuItem
             // 
             this.generateCodeToolStripMenuItem.Name = "generateCodeToolStripMenuItem";
-            this.generateCodeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.generateCodeToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
             this.generateCodeToolStripMenuItem.Text = "Generate Code";
-            this.generateCodeToolStripMenuItem.Click += new System.EventHandler(this.generateCodeToolStripMenuItem_Click);
+            this.generateCodeToolStripMenuItem.Click += new System.EventHandler(this.GenerateCodeToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
             this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.abouitToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(61, 29);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // abouitToolStripMenuItem
             // 
             this.abouitToolStripMenuItem.Name = "abouitToolStripMenuItem";
-            this.abouitToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.abouitToolStripMenuItem.Size = new System.Drawing.Size(147, 30);
             this.abouitToolStripMenuItem.Text = "About";
             // 
             // StartForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(345, 146);
+            this.ClientSize = new System.Drawing.Size(518, 225);
             this.Controls.Add(this.GenerateButton);
             this.Controls.Add(this.CreateLayoutButton);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.StartMenuStrip);
             this.MainMenuStrip = this.StartMenuStrip;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "StartForm";
             this.Text = "MediaWiki Helper Applet";
+            this.Load += new System.EventHandler(this.StartForm_Load);
             this.StartMenuStrip.ResumeLayout(false);
             this.StartMenuStrip.PerformLayout();
             this.ResumeLayout(false);
