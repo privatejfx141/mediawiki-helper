@@ -25,5 +25,9 @@ namespace MediaWikiHelperApplet {
         private void ReturnButton_Click(object sender, EventArgs e) {
             this.Close();
         }
+
+        private void CreateForm_Load(object sender, EventArgs e) {
+
+        }
     }
 }
