@@ -1,7 +1,9 @@
 ﻿using System;
+susing System.IO;
 using System.Windows.Forms;
 
 namespace MediaWikiHelperApplet {
+
     public partial class StartForm : Form {
 
         /// <summary>
@@ -75,7 +77,17 @@ namespace MediaWikiHelperApplet {
         }
 
         private void StartForm_Load(object sender, EventArgs e) {
-
+            // this is test code
+            Template unitbox = new Template("Infobox unit");
+            unitbox.AddDefaults();
+            String[] vars = { "faction", "role", "class", "cost", "hp", "speed", "armor", "range",
+                "sight", "weapons", "firepower", "vsarmor", "vssupport", "vsinfantry", "vsair",
+                "offensive", "defensive" };
+            foreach (String var in vars) {
+                unitbox.AddVariable(var);
+            }
+            unitbox.SetValue("faction", "NATO");
+            Console.WriteLine(unitbox.ToMarkup(true));
         }
     }
 }

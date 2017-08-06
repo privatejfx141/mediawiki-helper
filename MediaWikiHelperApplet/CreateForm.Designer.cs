@@ -25,16 +25,20 @@
         private void InitializeComponent() {
             this.ReturnButton = new System.Windows.Forms.Button();
             this.CreateMenuStrip = new System.Windows.Forms.MenuStrip();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.VarListBox = new System.Windows.Forms.ListBox();
+            this.NameTextBox = new System.Windows.Forms.TextBox();
+            this.VarTextBox = new System.Windows.Forms.TextBox();
+            this.InsertVarButton = new System.Windows.Forms.Button();
+            this.SetNameButton = new System.Windows.Forms.Button();
             this.CreateMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // ReturnButton
             // 
-            this.ReturnButton.Location = new System.Drawing.Point(344, 264);
+            this.ReturnButton.Location = new System.Drawing.Point(344, 288);
             this.ReturnButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ReturnButton.Name = "ReturnButton";
             this.ReturnButton.Size = new System.Drawing.Size(108, 32);
@@ -56,15 +60,6 @@
             this.CreateMenuStrip.TabIndex = 2;
             this.CreateMenuStrip.Text = "menuStrip1";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(296, 32);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(160, 224);
-            this.listBox1.TabIndex = 3;
-            // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -82,15 +77,62 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(147, 30);
             this.aboutToolStripMenuItem.Text = "About";
+            // 
+            // VarListBox
+            // 
+            this.VarListBox.FormattingEnabled = true;
+            this.VarListBox.ItemHeight = 20;
+            this.VarListBox.Location = new System.Drawing.Point(280, 48);
+            this.VarListBox.Name = "VarListBox";
+            this.VarListBox.Size = new System.Drawing.Size(176, 224);
+            this.VarListBox.TabIndex = 3;
+            // 
+            // NameTextBox
+            // 
+            this.NameTextBox.Location = new System.Drawing.Point(8, 48);
+            this.NameTextBox.Name = "NameTextBox";
+            this.NameTextBox.Size = new System.Drawing.Size(256, 26);
+            this.NameTextBox.TabIndex = 4;
+            // 
+            // VarTextBox
+            // 
+            this.VarTextBox.Location = new System.Drawing.Point(8, 120);
+            this.VarTextBox.Name = "VarTextBox";
+            this.VarTextBox.Size = new System.Drawing.Size(256, 26);
+            this.VarTextBox.TabIndex = 5;
+            // 
+            // InsertVarButton
+            // 
+            this.InsertVarButton.Location = new System.Drawing.Point(8, 152);
+            this.InsertVarButton.Name = "InsertVarButton";
+            this.InsertVarButton.Size = new System.Drawing.Size(168, 32);
+            this.InsertVarButton.TabIndex = 6;
+            this.InsertVarButton.Text = "&Insert New Variable";
+            this.InsertVarButton.UseVisualStyleBackColor = true;
+            this.InsertVarButton.Click += new System.EventHandler(this.InsertVarButton_Click);
+            // 
+            // SetNameButton
+            // 
+            this.SetNameButton.Location = new System.Drawing.Point(8, 80);
+            this.SetNameButton.Name = "SetNameButton";
+            this.SetNameButton.Size = new System.Drawing.Size(168, 32);
+            this.SetNameButton.TabIndex = 7;
+            this.SetNameButton.Text = "&Set Template Name";
+            this.SetNameButton.UseVisualStyleBackColor = true;
+            this.SetNameButton.Click += new System.EventHandler(this.SetNameButton_Click);
             // 
             // CreateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(465, 309);
-            this.Controls.Add(this.listBox1);
+            this.ClientSize = new System.Drawing.Size(465, 326);
+            this.Controls.Add(this.SetNameButton);
+            this.Controls.Add(this.InsertVarButton);
+            this.Controls.Add(this.VarTextBox);
+            this.Controls.Add(this.NameTextBox);
+            this.Controls.Add(this.VarListBox);
             this.Controls.Add(this.ReturnButton);
             this.Controls.Add(this.CreateMenuStrip);
             this.MainMenuStrip = this.CreateMenuStrip;
@@ -112,6 +154,10 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox VarListBox;
+        private System.Windows.Forms.TextBox NameTextBox;
+        private System.Windows.Forms.TextBox VarTextBox;
+        private System.Windows.Forms.Button InsertVarButton;
+        private System.Windows.Forms.Button SetNameButton;
     }
 }
